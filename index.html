@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Document</title>
+
+	<link rel="stylesheet" href="assets/css/full-page-scroll.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/full-page-scroll.js"></script>
+	<script src="assets/js/main.js"></script>
+</head>
+<body>
+	<div id="bwWrap">
+		<div class="wrap-contents">
+			<div class="wrap-header" role="header">
+				<h1>
+					<a href="javascript:;" class="link-header">1</a>
+				</h1>
+				<a href="javascript:;" class="link-header">2</a>
+			</div>
+
+			<div class="wrap-main scroll-container" id="main" role="main">
+				<section class="main-cont main-cont-1">
+					<div class="txt">
+						<h2>
+							
+						</h2>
+					</div>
+					<div class="img">
+						<img src="assets/images/img-1.png" alt="">
+					</div>
+					<figure class="wrap-scroll">
+						<img src="assets/images/svg/ico-scroll.svg" class="ico-scroll" alt="">
+					</figure>
+				</section>
+				<section class="main-cont main-cont-2"></section>
+				<section class="main-cont main-cont-3"></section>
+				<section class="main-cont main-cont-4"></section>
+				<section class="main-cont main-cont-5"></section>
+				<section class="main-cont main-cont-6" id="lastSection"></section>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		new fullScroll({
+			container : 'main',
+			sections : 'section',
+			currentPosition: 0,
+			displayDots: true,
+			dotsPosition: 'left',
+			animateTime: 1,
+			animateFunction: 'ease'
+		});
+	</script>
+	<script>
+		function handleHeaderVisibility(entries) {
+			entries.forEach(entry => {
+
+				const header = document.querySelector('.wrap-header');
+
+				if (entry.isIntersecting) {
+					header.style.display = 'none';
+				} else {
+					header.style.display = 'block';
+				}
+			});
+		}
+
+		let observer = new IntersectionObserver(handleHeaderVisibility, {
+				root: null,
+				rootMargin: '0px',
+				threshold: 0.2
+		});
+
+		let lastSection = document.querySelector('#lastSection');
+		observer.observe(lastSection);
+	</script>
+
+</body></html>
