@@ -1,0 +1,102 @@
+@font-face {
+	font-family: 'BMHANNAPro';
+	src: url('../fonts/BMHANNAPro.ttf') format('ttf'),
+			url('../fonts/BMHANNAProOTF.otf') format('otf');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'BMHANNAPro';
+	src: url('../fonts/BMHANNAPro.ttf') format('ttf'),
+			url('../fonts/BMHANNAProOTF.otf') format('otf');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@mixin title-1($color) {
+	font-size: $font-size-64;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: -0.6px;
+	color: $color
+}
+
+@mixin title-2($color) {
+	font-size: $font-size-16;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: -0.6px;
+	color: $color
+}
+
+@mixin title-3($color) {
+	font-size: $font-size-18;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: -0.6px;
+	color: $color
+}
+
+@mixin subhead-1($color) {
+	font-size: $font-size-12;
+	font-weight: 600;
+	line-height: 1.5;
+	letter-spacing: -0.6px;
+	color: $color
+}
+
+@mixin subhead-2($color) {
+	font-size: $font-size-14;
+	font-weight: 600;
+	line-height: 1.5;
+	letter-spacing: -0.6px;
+	color: $color
+}
+
+@mixin subhead-3($color) {
+	font-size: $font-size-16;
+	font-weight: 600;
+	line-height: 1.5;
+	letter-spacing: -0.6px;
+	color: $color
+}
+
+@mixin subhead-4($color) {
+	font-size: $font-size-18;
+	font-weight: 600;
+	line-height: 1.5;
+	letter-spacing: -0.6px;
+	color: $color
+}
+
+@mixin body-1($color) {
+	font-size: $font-size-12;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: -0.6px;
+	color: $color
+}
+
+@mixin body-2($color) {
+	font-size: $font-size-14;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: -0.6px;
+	color: $color
+}
+
+@mixin body-3($color) {
+	font-size: $font-size-16;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: -0.6px;
+	color: $color
+}
+
+@mixin body-4($color) {
+	font-size: $font-size-18;
+	font-weight: 500;
+	line-height: 1.5;
+	letter-spacing: -0.6px;
+	color: $color
+}

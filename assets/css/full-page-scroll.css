@@ -1,0 +1,57 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.scroll-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.scroll-container section {
+	width: 100%;
+	height: 100%;
+}
+
+.dots {	
+	z-index: 1;
+	list-style: none;
+	padding: 0;
+	position: absolute;	
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.dots li + li {
+	margin-top: 12px;
+}
+
+.dots li a {
+	width: 12px;
+	height: 12px;
+	display: block;
+	background: url('../images/svg/dot-inactive.svg') center center no-repeat;
+	background-size: cover;
+}
+.dots li a.active {
+	background: url('../images/svg/dot-active.svg') center center no-repeat;
+	background-size: cover;
+}
+
+.dots-right {
+	left: 25px;
+}
+
+.dots-left {
+	right: 10px;
+}
