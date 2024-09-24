@@ -5,9 +5,21 @@ body {
   font-family: "BMHANNAPro", "sans-serif";
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+p {
+  font-family: "BMHANNAPro", "sans-serif";
+}
+
 a,
 a:hover {
   text-decoration: none;
+  font-family: "BMHANNAPro", "sans-serif";
 }
 
 img {
@@ -47,7 +59,7 @@ table {
   border-collapse: collapse;
 }
 
-*,
+html,
 body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -71,23 +83,25 @@ body {
 
 @font-face {
   font-family: "BMHANNAPro";
-  src: url("../fonts/BMHANNAPro.ttf") format("ttf"), url("../fonts/BMHANNAProOTF.otf") format("otf");
-  font-weight: 500;
+  src: local("../fonts/BMHANNAProOTF.otf") format("opentype"), url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.0/BMHANNAPro.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "BMHANNAPro";
-  src: url("../fonts/BMHANNAPro.ttf") format("ttf"), url("../fonts/BMHANNAProOTF.otf") format("otf");
+  src: local("../fonts/BMHANNAProOTF.otf") format("opentype"), url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_seven@1.0/BMHANNAPro.woff") format("woff");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 #bwWrap {
   overflow: hidden;
   position: relative;
   width: 100%;
-  max-width: 1440px;
   height: 100%;
   margin: 0 auto;
+  background-color: #2AC1BC;
 }
 
 .wrap-contents {
@@ -99,20 +113,30 @@ body {
 
 .wrap-header {
   z-index: 1;
+  position: fixed;
+  width: 614px;
+  margin: 0 auto;
+  padding: 16px 32px 0 59px;
+}
+.wrap-header ul {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  position: fixed;
-  width: 646px;
-  height: 51px;
-  margin: 0 auto;
-  padding: 0 32px 0 59px;
 }
-.wrap-header a,
-.wrap-header .link-header {
+.wrap-header ul li {
   display: flex;
+}
+.wrap-header ul li h1 {
+  display: inline-block;
+}
+.wrap-header ul li a,
+.wrap-header ul li .link-header {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
   color: #FFF;
-  background-color: antiquewhite;
 }
 
 .wrap-main {
@@ -123,28 +147,35 @@ body {
 .wrap-main section {
   position: relative;
   width: 100%;
-  height: 100vh;
-  max-height: 900px;
+  height: calc(100vh - 51px);
+  min-height: 900px;
   margin: 0 auto;
   padding: 51px 0 0 59px;
 }
-.wrap-main section.main-cont-1 {
-  background-color: #16325B;
+.wrap-main section.main-cont-9 {
+  height: 100vh;
+  padding: 30px 0 0 0;
+  background-color: #FFF;
 }
-.wrap-main section:nth-child(2) {
-  background-color: #227B94;
+.wrap-main section.main-cont-9 header {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 6px 8px 0;
+  border-bottom: 1px solid #C1BEB5;
 }
-.wrap-main section:nth-child(3) {
-  background-color: #78B7D0;
+.wrap-main section.main-cont-9 header h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
+  color: #333;
+  text-align: right;
 }
-.wrap-main section:nth-child(4) {
-  background-color: #FFDC7F;
+.wrap-main section.main-cont-9 .txt {
+  padding: 45px 0 0 32px;
 }
-.wrap-main section:nth-child(5) {
-  background-color: #C96868;
-}
-.wrap-main section:nth-child(6) {
-  background-color: #EAE4DD;
+.wrap-main section.main-cont-9 footer {
+  position: relative;
+  height: calc(100vh - 64px)/2;
 }
 .wrap-main section .txt {
   position: relative;
@@ -152,6 +183,18 @@ body {
 }
 .wrap-main section .txt h2 {
   font-size: 64px;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+  color: #FFF;
+}
+.wrap-main section .txt h2 span {
+  display: inline-block;
+  padding-top: 44px;
+}
+.wrap-main section .txt strong {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.6px;
   color: #FFF;
 }
 .wrap-main section .img {
@@ -172,4 +215,43 @@ body {
   display: inline-block;
   width: 22px;
   height: auto;
+}
+
+[class*=ico-] {
+  display: inline-block;
+}
+
+.ico-kakao-header {
+  width: 35px;
+  height: 35px;
+  margin-right: 12px;
+  background: url("../images/svg/ico-kakaotalk-header.svg") center center no-repeat;
+  background-size: cover;
+}
+.ico-kakao-footer {
+  width: 30px;
+  height: 30px;
+  background: url("../images/svg/ico-kakaotalk-footer.svg") center center no-repeat;
+  background-size: cover;
+}
+
+.ico-location {
+  width: 30px;
+  height: 30px;
+  background: url("../images/svg/ico-location.svg") center center no-repeat;
+  background-size: cover;
+}
+
+.ico-phone {
+  width: 30px;
+  height: 30px;
+  background: url("../images/svg/ico-phone.svg") center center no-repeat;
+  background-size: cover;
+}
+
+.ico-mail {
+  width: 30px;
+  height: 30px;
+  background: url("../images/svg/ico-mail.svg") center center no-repeat;
+  background-size: cover;
 }
