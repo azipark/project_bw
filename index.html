@@ -6,34 +6,41 @@
 
 	<title>수거반장</title>
 
-	<link rel="stylesheet" href="assets/css/full-page-scroll.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.29/fullpage.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
 
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/full-page-scroll.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.0/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.29/fullpage.min.js"></script>
+	<script src="assets/js/main.js"></script>
 </head>
+
 <body>
 	<div id="bwWrap">
-		<div class="wrap-contents">
-			<div class="wrap-header" role="header">
-				<ul>
-					<li>
-						<h1>
-							<a href="javascript:;" class="link-header">수거반장</a>
-						</h1>
-					</li>
-					<li>
-						<a href="javascript:;" class="link-header">
-							<span class="ico-kakao-header"></span>
-							카카오톡
-						</a>
-					</li>
-				</ul>
-			</div>
+		<div class="wrap-header" role="header">
+			<ul>
+				<li>
+					<h1><a href="javascript:;" class="link-header">수거반장</a></h1>
+				</li>
+				<li>
+					<a href="javascript:;" class="link-header">
+						<span class="ico-kakao-header"></span>
+						카카오톡<br/>문의하기
+					</a>
+				</li>
+			</ul>
+		</div>
+		<figure class="wrap-scroll">
+			<img src="assets/images/svg/ico-scroll.svg" class="ico-scroll" alt="스크롤 이미지">
+		</figure>
 
-			<div class="wrap-main scroll-container" id="main" role="main">
-				<section class="main-cont main-cont-1">
-					<div class="txt">
+		<div class="wrap-main" id="fullpage" role="main">
+			<section class="section main-cont main-cont-1" id="firstSection">
+				<div class="inner">
+					<div class="wrap-txt">
 						<h2>
 							인테리어<br/>
 							폐기물 처리<br/>
@@ -43,16 +50,18 @@
 							</span>
 						</h2>
 					</div>
-					<div class="img">
-						<img src="assets/images/img-1.png" class="img-1" alt="">
+					<div class="wrap-img img-1">
+						<img src="assets/images/img-1.png"
+							data-aos="fade-left"
+							data-aos-duration="500"
+						alt="">
 					</div>
-					<figure class="wrap-scroll">
-						<img src="assets/images/svg/ico-scroll.svg" class="ico-scroll" alt="">
-					</figure>
-				</section>
+				</div>
+			</section>
 
-				<section class="main-cont main-cont-2">
-					<div class="txt">
+			<section class="section main-cont main-cont-2" id="secondSection">
+				<div class="inner">
+					<div class="wrap-txt">
 						<h2>
 							소형 이동식<br/>
 							폐기물 박스
@@ -61,28 +70,29 @@
 							수거반장은 소형 이동식 폐기물 박스를 통해<br/>
 							인테리어 건축물 폐기물을 손쉽게 수집하고<br/>
 							운반해 드립니다.<br/>
-							<br/>
+							<span class="spacing"></span>
 							현장에 박스를 바로 배치해 드리고,<br/>
 							폐기물이 가득 차면<br/>
 							반출 요청만 해 주세요.<br/>
-							<br/>
+							<span class="spacing"></span>
 							저희가 폐기물 박스를 통째로 수거해<br/>
 							갑니다.<br/>
-							<br/>
+							<span class="spacing"></span>
 							현장 상황에 맞게 편리하게 이용해<br/>
 							보세요!
 						</strong>
 					</div>
-					<div class="img">
-						<img src="assets/images/img-2.png" class="img-2" alt="">
+					<div class="wrap-img img-2">
+						<img src="assets/images/img-1.png"
+							data-aos="fade-left"
+						alt="">
 					</div>
-					<figure class="wrap-scroll">
-						<img src="assets/images/svg/ico-scroll.svg" class="ico-scroll" alt="">
-					</figure>
-				</section>
+				</div>
+			</section>
 
-				<section class="main-cont main-cont-3">
-					<div class="txt">
+			<section class="section main-cont main-cont-3" id="thirdSection">
+				<div class="inner">
+					<div class="wrap-txt">
 						<h2>
 							항상<br/>
 							지저분 했던<br/>
@@ -92,22 +102,19 @@
 							현장에 방치되는 폐기물들이 획기적으로<br/>
 							줄어들어요. 청소를 따로 할 인력도 필요하지<br/>
 							않고 편하게 정리 할 수 있어서 너무 좋아요<br/>
-							<br/>
+							<span class="spacing"></span>
 							현장이 넓어지고 깔끔해지는 만큼<br/>
 							작업 공간도 더 확보되어 작업자 분들의 능률도<br/>
 							엄청나게 향상되어요.
 						</strong>
 					</div>
-					<div class="img">
-						<img src="assets/images/img-3.png" class="img-3" alt="">
-					</div>
-					<figure class="wrap-scroll">
-						<img src="assets/images/svg/ico-scroll.svg" class="ico-scroll" alt="">
-					</figure>
-				</section>
+					<div class="wrap-img img-3"></div>
+				</div>
+			</section>
 
-				<section class="main-cont main-cont-4">
-					<div class="txt">
+			<section class="section main-cont main-cont-4" id="fourthSection">
+				<div class="inner">
+					<div class="wrap-txt">
 						<h2>
 							더이상<br/>
 							마대작업<br/>
@@ -116,24 +123,21 @@
 						<strong>
 							폐기물반출, 현장을 깔끔히 유지하기 위해 했던<br/>
 							마대 작업 부담이 없어졌어요.<br/>
-							<br/>
+							<span class="spacing"></span>
 							반장님들께 매번 청소해달라고 말씀 드리기도<br/>
 							눈치 보였고 직접 하기에도 매번 너무 힘들고<br/>
 							사람을 쓰자니 인건비가 부담스럽고..<br/>
-							<br/>
+							<span class="spacing"></span>
 							현장에서 에러 사항들이 한번에 해결됐어요.
 						</strong>
 					</div>
-					<div class="img">
-						<img src="assets/images/img-4.png" class="img-4" alt="">
-					</div>
-					<figure class="wrap-scroll">
-						<img src="assets/images/svg/ico-scroll.svg" class="ico-scroll" alt="">
-					</figure>
-				</section>
+					<div class="wrap-img img-4"></div>
+				</div>
+			</section>
 
-				<section class="main-cont main-cont-5">
-					<div class="txt">
+			<section class="section main-cont main-cont-5" id="fifthSection">
+				<div class="inner">
+					<div class="wrap-txt">
 						<h2>
 							편리하고<br/>
 							간편한 이동
@@ -143,74 +147,86 @@
 							정말 유용한 친구가 되어줄 거예요!<br/>
 							예전엔 폐기물을 마대에 쌓아두고, 이리저리 옮기느라<br/>
 							애먹었죠? 이제 그럴 필요 없어요.<br/>
-							<br/>
+							<span class="spacing"></span>
 							이 박스만 있으면 작업할 때 간단히 옆으로 밀어두기만<br/>
 							하면 되거든요. 공간도 더 효율적으로 쓰고, 작업도 훨씬<br/>
 							수월해집니다.<br/>
-							<br/>
+							<span class="spacing"></span>
 							작업할 때 작은 도움을 주는 이 친구, 한번 써보시면<br/>
 							작업환경이 얼마나 편해지는지 느끼실 거예요!
 						</strong>
 					</div>
-					<div class="img">
-						<img src="assets/images/img-5.png" class="img-5" alt="">
-					</div>
-					<figure class="wrap-scroll">
-						<img src="assets/images/svg/ico-scroll.svg" class="ico-scroll" alt="">
-					</figure>
-				</section>
+					<div class="wrap-img img-5"></div>
+				</div>
+			</section>
 
-				<section class="main-cont main-cont-6">
-					<div class="txt">
+			<section class="section main-cont main-cont-6" id="sixthSection">
+				<div class="inner">
+					<div class="wrap-txt">
 						<h2>
 							사이즈 및 용량
 						</h2>
 						<strong>
 							폐기물 1박스<br/>
-							(사이즈: 1090mm x 790mm x 1420mm)
-
+							(사이즈: 1090mm x 790mm x 1420mm)<br/>
+							<br/>
 							폐기물 1/2박스<br/>
 							(사이즈: 1090mm x 790mm X 640MM)
 						</strong>
+						<div class="wrap-img img-6"></div>
 					</div>
-					<div class="img">
-						<img src="assets/images/img-6.png" class="img-6" alt="">
-						<img src="assets/images/img-7.png" class="img-7" alt="">
+					<div class="wrap-txt">
+						<strong>
+							기존에 이용 하셨던 1톤 폐기물 1차는<br/>
+							소형 폐기물 박스 5개~6개와 같은 폐기물 분량입니다.
+						</strong>
+						<div class="wrap-img img-7"></div>
+						<strong class="mt-0 txt-right">
+							*소비자의 이해를 돕기위해<br/>
+							연출된 이미지 입니다.
+						</strong>
 					</div>
-					<figure class="wrap-scroll">
-						<img src="assets/images/svg/ico-scroll.svg" class="ico-scroll" alt="">
-					</figure>
-				</section>
+				</div>
+			</section>
 
-				<section class="main-cont main-cont-7">
-					<div class="txt">
+			<section class="section main-cont main-cont-7" id="seventhSection">
+				<div class="inner">
+					<div class="wrap-txt">
 						<h2>비용 안내</h2>
 						<strong>
 							폐기물 1박스: 7만원<br/>
 							(사이즈: 1090mm x 790mm x 1420mm)<br/>
-							<br/>
+							<span class="spacing"></span>
 							폐기물 1/2박스: 4만원<br/>
 							(사이즈: 1090mm x 790mm X 640MM)<br/>
-							<br/>
-							빈 박스를 배출할 경우, 금액은 폐기물 처리비가<br/>
-							아닌 임대료로 산정됩니다. 2,000원/1일.<br/>
-							<br/>
-							1회 방문 시 최대 6개의 박스를 반입 및 반출할 수 있으며,<br/>
+							<span class="spacing"></span>
+							빈 박스: 2,000원 / 1일<br/>
+							<span class="spacing"></span>
+							*빈 박스를 배출할 경우, 금액은 폐기물 처리비가<br/>
+							아닌 임대료로 산정됩니다.<br/>
+							<span class="spacing"></span>
+							수거 및 운반비: 10,000원<br/>
+							<span class="spacing"></span>
+							*1회 방문 시 최대 6개 박스를 반입 및 반출할 수 있으며,<br/>
 							운반비는 1회 방문당 10,000원입니다.<br/>
-							<br/>
-							반입일 기준으로 14일 이내에 수거 요청을 해주셔야 합니다.<br/>
-							운영 시간: 월금 08:00 ~ 17:00<br/>
-							<br/>
-							모든 비용에는 부가세가 포함되어 있지 않습니다.
+							<span class="spacing"></span>
+							청소 및 정리 서비스: 20,000원 / 1박스<br/>
+							<span class="spacing"></span>
+							*청소 및 정리 요청시 폐기물 1박스 당 20,000원 추가비용있으며,<br/>
+							사전 1일 전 예약주셔야 합니다.<br/>
+							미 예약시 당일 수거기사님에게 요청시 서비스 제공이 어려운점 양해바랍니다.<br/>
+							<span class="spacing"></span>
+							반입일 기준으로 7일 이내에 수거 요청을 해주셔야 합니다.<br/>
+							운영 시간: 월~토 08:00 ~ 17:00<br/>
 						</strong>
+						<strong class="txt-right">모든 금액 VAT 별도</strong>
 					</div>
-					<figure class="wrap-scroll">
-						<img src="assets/images/svg/ico-scroll.svg" class="ico-scroll" alt="">
-					</figure>
-				</section>
+				</div>
+			</section>
 
-				<section class="main-cont main-cont-8">
-					<div class="txt">
+			<section class="section main-cont main-cont-8" id="eighthSection">
+				<div class="inner">
+					<div class="wrap-txt">
 						<h2>
 							인테리어<br/>
 							폐기물<br/>
@@ -220,82 +236,95 @@
 						<strong>
 							인테리어 폐기물 마대작업 하고 치워줄 인력이<br/>
 							필요하신가요?<br/>
-							<br/>
+							<span class="spacing"></span>
 							1통당 2만원 서비스 비용 추가시<br/>
 							직접 박스를 가져가고 폐기물 직접 담고<br/>
 							배출까지 해드립니다.<br/>
-							<br/>
+							<span class="spacing"></span>
 							품수에 의한 비용이 아닌 폐기물 양에 따라<br/>
 							합리적인 금액으로 이용해보세요.<br/>
-							<br/>
+							<span class="spacing"></span>
 							*비움이 직접 폐기물 담고 수거 서비스 이용시<br/>
 							사전 최소 1일 전 예약은 필수입니다.
 						</strong>
 					</div>
-					<div class="img">
-						<img src="assets/images/img-8.png" class="img-8" alt="">
-					</div>
-					<figure class="wrap-scroll">
-						<img src="assets/images/svg/ico-scroll.svg" class="ico-scroll" alt="">
-					</figure>
-				</section>
+					<div class="wrap-img img-8"></div>
+				</div>
+			</section>
 
-				<section class="main-cont main-cont-9" id="lastSection">
+			<section class="section main-cont main-cont-9" id="lastSection">
+				<div class="inner">
 					<header>
 						<h2>
 							수거반장
 						</h2>
 					</header>
-					<div class="txt">
+					<div class="wrap-info">
 						<h3>
 							아름다운 당신이<br/>
-							떠난 자리도 아름다울 수 있도록 최선을 다하겠습니다.
+							떠난 자리도 아름다울 수 있도록<br/>
+							최선을 다하겠습니다.
 						</h3>
+						<h4 class="info">
+							성림환경
+						</h4>
 					</div>
-					<div class="info">
-
+					<div class="wrap-footer">
+						<div class="footer">
+							<dl>
+								<dt>연락처</dt>
+								<dd>1899-8780</dd>
+							</dl>
+							<dl>
+								<dt>소재지</dt>
+								<dd>
+									인천광역시 서구 사월로 62-11 (왕길동), 성림환경<br/>
+									(62-11, Sawol-ro, Seo-gu, Incheon, Republic of Korea)
+								</dd>
+							</dl>
+							<dl>
+								<dt>사업자번호</dt>
+								<dd>134-32-80083</dd>
+							</dl>
+							<dl>
+								<dt>이메일</dt>
+								<dd>help@soogeobanjang.com</dd>
+							</dl>
+						</div>
 					</div>
-					<footer>
-
-					</footer>
-				</section>
-			</div>
+				</div>
+			</section>
 		</div>
 	</div>
-
-	<script type="text/javascript">
-		new fullScroll({
-			container : 'main',
-			sections : 'section',
-			currentPosition: 0,
-			displayDots: true,
-			dotsPosition: 'left',
-			animateTime: 1,
-			animateFunction: 'ease'
-		});
-	</script>
+	<ul id="menu">
+		<li data-menuanchor="firstSection"><a href="#firstSection"><span class="visually-hidden">첫 번째 영역</span></a></li>
+		<li data-menuanchor="secondSection"><a href="#secondSection"><span class="visually-hidden">두 번째 영역</span></a></li>
+		<li data-menuanchor="thirdSection"><a href="#thirdSection"><span class="visually-hidden">세 번째 영역</span></a></li>
+		<li data-menuanchor="fourthSection"><a href="#fourthSection"><span class="visually-hidden">네 번째 영역</span></a></li>
+		<li data-menuanchor="fifthSection"><a href="#fifthSection"><span class="visually-hidden">다섯 번째 영역</span></a></li>
+		<li data-menuanchor="sixthSection"><a href="#sixthSection"><span class="visually-hidden">여섯 번째 영역</span></a></li>
+		<li data-menuanchor="seventhSection"><a href="#seventhSection"><span class="visually-hidden">일곱 번째 영역</span></a></li>
+		<li data-menuanchor="eighthSection"><a href="#eighthSection"><span class="visually-hidden">여덟 번째 영역</span></a></li>
+		<li data-menuanchor="ninthSection"><a href="#lastSection"><span class="visually-hidden">아홉 번째 영역</span></a></li>
+		
+	</ul>
 	<script>
-		function handleHeaderVisibility(entries) {
-			entries.forEach(entry => {
-
-				const header = document.querySelector('.wrap-header');
-
-				if (entry.isIntersecting) {
-					header.style.display = 'none';
-				} else {
-					header.style.display = 'block';
-				}
-			});
-		}
-
-		let observer = new IntersectionObserver(handleHeaderVisibility, {
-				root: null,
-				rootMargin: '0px',
-				threshold: 0.2
+		new fullpage('#fullpage', {
+			menu: '#menu',
+			anchors:['firstSection','secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection', 'eigthSection', 'lastSection'],
+			lockAnchors: false,
+			navigationPosition: 'right',
+			scrollingSpeed: 700,
+			autoScrolling: true,
+			fitToSection: false,
+			easing: 'easein',
+			easingcss3: 'ease',
+			dragAndMove: true,
 		});
-
-		let lastSection = document.querySelector('#lastSection');
-		observer.observe(lastSection);
+  
+		AOS.init({
+			once: true
+		});
 	</script>
 
 </body></html>
