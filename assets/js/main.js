@@ -1,104 +1,126 @@
-jQuery(function($) {
+// 모바일 스크롤 개선
+function setVh() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
 
-  var html = $('html');
-  var viewport = $(window);
-  var viewportHeight = viewport.height();
+setVh();
+window.addEventListener('resize', setVh);
+window.addEventListener('resize', setVh);
 
-  var scrollMenu = $('#section-menu'); // sidemenu
-  var timeout = null;
+// 네비게이션
+document.addEventListener("DOMContentLoaded", function() {
+  const dotsElement = document.querySelector('.dots');
 
-  function menuFreeze() {
-    if (timeout !== null) {
-      scrollMenu.removeClass('freeze');
-      clearTimeout(timeout);
-    }
+  if (dotsElement) {
+    const wrapperDiv = document.createElement('div');
+    wrapperDiv.classList.add('wrap-dots');
 
-    timeout = setTimeout(function() {
-      scrollMenu.addClass('freeze');
-    }, 2000);
+    dotsElement.parentNode.insertBefore(wrapperDiv, dotsElement);
+    wrapperDiv.appendChild(dotsElement);
   }
-  scrollMenu.mouseover(menuFreeze);
+});
 
-  /* ==========================================================================
-		Build the Scroll Menu based on Sections .scroll-item
-	========================================================================== */
+// 이미지 애니메이션
+document.addEventListener('DOMContentLoaded', function () {
+  const images = document.querySelectorAll('.wrap-img.animation');
 
-  var sectionsHeight = {},
-    viewportheight, i = 0;
-  var scrollItem = $('.scroll-item');
-  var bannerHeight;
-
-  function sectionListen() {
-    viewportHeight = viewport.height();
-    bannerHeight = (viewportHeight);
-    $('.section').addClass('resize');
-    scrollItem.each(function() {
-      sectionsHeight[this.title] = $(this).offset().top;
-    });
-  }
-  sectionListen();
-  viewport.resize(sectionListen);
-  viewport.bind('orientationchange', function() {
-    sectionListen();
-  });
-
-  var count = 0;
-
-  scrollItem.each(function() {
-    var anchor = $(this).attr('id');
-    var title = $(this).attr('title');
-    count++;
-    $('#section-menu ul').append('<li><a id="nav_' + title + '" href="#' + anchor + '"><span>' + count + '</span> ' + title + '</a></li>');
-  });
-
-  function menuListen() {
-    var pos = $(this).scrollTop();
-    pos = pos + viewportHeight * 0.625;
-    for (i in sectionsHeight) {
-      if (sectionsHeight[i] < pos) {
-        $('#section-menu a').removeClass('active');
-        $('#section-menu a#nav_' + i).addClass('active');;
-        var newHash = '#' + $('.scroll-item[title="' + i + '"]').attr('id');
-        if (history.pushState) {
-          history.pushState(null, null, newHash);
-        } else {
-          location.hash = newHash;
-        }
-      } else {
-        $('#section-menu a#nav_' + i).removeClass('active');
-        if (pos < viewportHeight - 72) {
-          history.pushState(null, null, ' ');
-        }
+  function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          entry.target.classList.add('fromRight');
+          observer.unobserve(entry.target);
       }
-    }
-  }
-  scrollMenu.css('margin-top', scrollMenu.height() / 2 * -1);
-
-  /* ==========================================================================
-		Smooth Scroll for Anchor Links and URL refresh
-	========================================================================== */
-
-  scrollMenu.find('a').click(function() {
-    var href = $.attr(this, 'href');
-    $('html').animate({
-      scrollTop: $(href).offset().top
-    }, 500, function() {
-      window.location.hash = href;
     });
-    return false;
+  }
+
+  const imageObserver = new IntersectionObserver(handleIntersection, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.3
   });
 
-  /* ==========================================================================
-		Fire functions on Scroll Event
-	========================================================================== */
-
-  function scrollHandler() {
-    menuListen();
-    menuFreeze();
-  }
-  scrollHandler();
-  viewport.on('scroll', function() {
-    scrollHandler();
-    //			window.requestAnimationFrame(scrollHandler);
+  images.forEach(image => {
+    imageObserver.observe(image);
   });
 });
+
+// 터치 및 휠 스크롤
+let currentSection = 0;
+const sections = document.querySelectorAll('.section');
+const totalSections = sections.length;
+let isScrolling = false;
+const scrollDelay = 800;
+let touchStartY = 0;
+let touchEndY = 0;
+
+// 스크롤 잠금 해제
+function unlockScroll() {
+  isScrolling = false;
+}
+
+// 섹션으로 스크롤 이동
+function scrollToSection(sectionIndex) {
+  if (isScrolling || sectionIndex < 0 || sectionIndex >= totalSections) return;
+
+  isScrolling = true;
+  const offset = -sectionIndex * window.innerHeight;
+  sections.forEach(section => {
+    section.style.transform = `translateY(${offset}px)`;
+  });
+  currentSection = sectionIndex;
+
+  setTimeout(unlockScroll, scrollDelay); // 스크롤 잠금 해제
+}
+
+// 터치 이벤트 핸들러
+function handleTouchStart(e) {
+  touchStartY = e.changedTouches[0].screenY;
+}
+
+function handleTouchEnd(e) {
+  touchEndY = e.changedTouches[0].screenY;
+  
+  if (touchEndY < touchStartY) {
+    scrollToSection(currentSection + 1);
+  } else {
+    scrollToSection(currentSection - 1);
+  }
+}
+
+window.addEventListener('touchstart', handleTouchStart);
+window.addEventListener('touchend', handleTouchEnd);
+
+// 휠 이벤트 핸들러
+function handleWheelEvent(e) {
+  if (isScrolling) return;
+
+  if (e.deltaY > 0) {
+    scrollToSection(currentSection + 1);
+  } else {
+    scrollToSection(currentSection - 1);
+  }
+
+  setTimeout(unlockScroll, scrollDelay);
+}
+
+window.addEventListener('wheel', handleWheelEvent);
+
+// 마지막 섹션 감지 및 IntersectionObserver 설정
+const sectionObserver = new IntersectionObserver(handleIntersection, {
+  root: null,
+  rootMargin: '0px 0px -10% 0px',
+  threshold: 0.1
+});
+
+sections.forEach(section => {
+  sectionObserver.observe(section);
+});
+
+function handleIntersection(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}

@@ -4,38 +4,47 @@
 
 .ico-kakao {
   &-header {
-    width: 35px;
-    height: 35px;
-    margin-right: 12px;
+    width: 21px;
+    height: 21px;
+    margin-right: 8px;
     background: url('../images/svg/ico-kakaotalk-header.svg') center center no-repeat;
     background-size: cover;
+
+    @include tablet {
+      width: 32px;
+      height: 32px;
+    }
+    @include desktop {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   &-footer {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background: url('../images/svg/ico-kakaotalk-footer.svg') center center no-repeat;
     background-size: cover;
   }
 }
 
 .ico-location {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background: url('../images/svg/ico-location.svg') center center no-repeat;
   background-size: cover;
 }
 
 .ico-phone {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background: url('../images/svg/ico-phone.svg') center center no-repeat;
   background-size: cover;
 }
 
 .ico-mail {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background: url('../images/svg/ico-mail.svg') center center no-repeat;
   background-size: cover;
 }

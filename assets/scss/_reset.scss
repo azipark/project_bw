@@ -5,6 +5,11 @@ body {
 	font-family: 'BMHANNAPro', 'sans-serif';
 }
 
+html,
+body {
+	overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -58,4 +63,8 @@ input {
 
 table {
 	border-collapse: collapse;
+}
+
+.fp-watermark {
+	display: none !important;
 }

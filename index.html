@@ -3,42 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no" />
 
 	<title>수거반장</title>
 
 	<link rel="stylesheet" href="assets/css/style.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.29/fullpage.css"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+	<link rel="stylesheet" href="assets/css/full-page-scroll.css">
+	
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.0/jquery-ui.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.29/fullpage.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/full-page-scroll.js"></script>
+	
 </head>
-
 <body>
 	<div id="bwWrap">
 		<div class="wrap-header" role="header">
 			<ul>
-				<li>
-					<h1><a href="javascript:;" class="link-header">수거반장</a></h1>
-				</li>
-				<li>
-					<a href="javascript:;" class="link-header">
-						<span class="ico-kakao-header"></span>
-						카카오톡<br/>문의하기
-					</a>
-				</li>
+				<li><h1><a href="javascript:;" class="link-header">수거반장</a></h1></li>
+				<li><a href="javascript:;" class="link-header"><span class="ico-kakao-header"></span>카카오톡<br/>문의하기</a></li>
 			</ul>
 		</div>
 		<figure class="wrap-scroll">
 			<img src="assets/images/svg/ico-scroll.svg" class="ico-scroll" alt="스크롤 이미지">
 		</figure>
 
-		<div class="wrap-main" id="fullpage" role="main">
-			<section class="section main-cont main-cont-1" id="firstSection">
+		<div class="wrap-main scroll-container" id="main" role="main">
+			<section class="main-cont main-cont-1">
 				<div class="inner">
 					<div class="wrap-txt">
 						<h2>
@@ -50,16 +43,11 @@
 							</span>
 						</h2>
 					</div>
-					<div class="wrap-img img-1">
-						<img src="assets/images/img-1.png"
-							data-aos="fade-left"
-							data-aos-duration="500"
-						alt="">
-					</div>
+					<div class="wrap-img img-1 animation"></div>
 				</div>
 			</section>
 
-			<section class="section main-cont main-cont-2" id="secondSection">
+			<section class="main-cont main-cont-2">
 				<div class="inner">
 					<div class="wrap-txt">
 						<h2>
@@ -82,15 +70,11 @@
 							보세요!
 						</strong>
 					</div>
-					<div class="wrap-img img-2">
-						<img src="assets/images/img-1.png"
-							data-aos="fade-left"
-						alt="">
-					</div>
+					<div class="wrap-img img-2 animation"></div>
 				</div>
 			</section>
 
-			<section class="section main-cont main-cont-3" id="thirdSection">
+			<section class="main-cont main-cont-3">
 				<div class="inner">
 					<div class="wrap-txt">
 						<h2>
@@ -108,11 +92,11 @@
 							엄청나게 향상되어요.
 						</strong>
 					</div>
-					<div class="wrap-img img-3"></div>
+					<div class="wrap-img img-3 animation"></div>
 				</div>
 			</section>
 
-			<section class="section main-cont main-cont-4" id="fourthSection">
+			<section class="main-cont main-cont-4">
 				<div class="inner">
 					<div class="wrap-txt">
 						<h2>
@@ -131,11 +115,11 @@
 							현장에서 에러 사항들이 한번에 해결됐어요.
 						</strong>
 					</div>
-					<div class="wrap-img img-4"></div>
+					<div class="wrap-img img-4 animation"></div>
 				</div>
 			</section>
 
-			<section class="section main-cont main-cont-5" id="fifthSection">
+			<section class="main-cont main-cont-5">
 				<div class="inner">
 					<div class="wrap-txt">
 						<h2>
@@ -156,11 +140,11 @@
 							작업환경이 얼마나 편해지는지 느끼실 거예요!
 						</strong>
 					</div>
-					<div class="wrap-img img-5"></div>
+					<div class="wrap-img img-5 animation"></div>
 				</div>
 			</section>
 
-			<section class="section main-cont main-cont-6" id="sixthSection">
+			<section class="main-cont main-cont-6">
 				<div class="inner">
 					<div class="wrap-txt">
 						<h2>
@@ -189,7 +173,7 @@
 				</div>
 			</section>
 
-			<section class="section main-cont main-cont-7" id="seventhSection">
+			<section class="main-cont main-cont-7">
 				<div class="inner">
 					<div class="wrap-txt">
 						<h2>비용 안내</h2>
@@ -224,7 +208,7 @@
 				</div>
 			</section>
 
-			<section class="section main-cont main-cont-8" id="eighthSection">
+			<section class="main-cont main-cont-8">
 				<div class="inner">
 					<div class="wrap-txt">
 						<h2>
@@ -248,11 +232,11 @@
 							사전 최소 1일 전 예약은 필수입니다.
 						</strong>
 					</div>
-					<div class="wrap-img img-8"></div>
+					<div class="wrap-img img-8 animation"></div>
 				</div>
 			</section>
 
-			<section class="section main-cont main-cont-9" id="lastSection">
+			<section class="main-cont main-cont-9" id="lastSection">
 				<div class="inner">
 					<header>
 						<h2>
@@ -261,9 +245,8 @@
 					</header>
 					<div class="wrap-info">
 						<h3>
-							아름다운 당신이<br/>
-							떠난 자리도 아름다울 수 있도록<br/>
-							최선을 다하겠습니다.
+							작업 현장의 새로운 솔루션<br/>
+							수거반장이 만들어가겠습니다.
 						</h3>
 						<h4 class="info">
 							성림환경
@@ -273,7 +256,9 @@
 						<div class="footer">
 							<dl>
 								<dt>연락처</dt>
-								<dd>1899-8780</dd>
+								<dd>
+									<a href="tel:1899-8780">1899-8780</a>
+								</dd>
 							</dl>
 							<dl>
 								<dt>소재지</dt>
@@ -290,41 +275,52 @@
 								<dt>이메일</dt>
 								<dd>help@soogeobanjang.com</dd>
 							</dl>
+							<dl>
+								<dt>카카오 플러스 친구 ID</dt>
+								<dd>soogeobanjang</dd>
+							</dl>
 						</div>
 					</div>
 				</div>
 			</section>
 		</div>
 	</div>
-	<ul id="menu">
-		<li data-menuanchor="firstSection"><a href="#firstSection"><span class="visually-hidden">첫 번째 영역</span></a></li>
-		<li data-menuanchor="secondSection"><a href="#secondSection"><span class="visually-hidden">두 번째 영역</span></a></li>
-		<li data-menuanchor="thirdSection"><a href="#thirdSection"><span class="visually-hidden">세 번째 영역</span></a></li>
-		<li data-menuanchor="fourthSection"><a href="#fourthSection"><span class="visually-hidden">네 번째 영역</span></a></li>
-		<li data-menuanchor="fifthSection"><a href="#fifthSection"><span class="visually-hidden">다섯 번째 영역</span></a></li>
-		<li data-menuanchor="sixthSection"><a href="#sixthSection"><span class="visually-hidden">여섯 번째 영역</span></a></li>
-		<li data-menuanchor="seventhSection"><a href="#seventhSection"><span class="visually-hidden">일곱 번째 영역</span></a></li>
-		<li data-menuanchor="eighthSection"><a href="#eighthSection"><span class="visually-hidden">여덟 번째 영역</span></a></li>
-		<li data-menuanchor="ninthSection"><a href="#lastSection"><span class="visually-hidden">아홉 번째 영역</span></a></li>
-		
-	</ul>
-	<script>
-		new fullpage('#fullpage', {
-			menu: '#menu',
-			anchors:['firstSection','secondSection', 'thirdSection', 'fourthSection', 'fifthSection', 'sixthSection', 'seventhSection', 'eigthSection', 'lastSection'],
-			lockAnchors: false,
-			navigationPosition: 'right',
-			scrollingSpeed: 700,
-			autoScrolling: true,
-			fitToSection: false,
-			easing: 'easein',
-			easingcss3: 'ease',
-			dragAndMove: true,
-		});
-  
-		AOS.init({
-			once: true
+
+	<script type="text/javascript">
+		new fullScroll({
+			mainElement: "main",
+			displayDots: true,
+			dotsPosition: "left",
+			animateTime: 0.7,
+			animateFunction: "ease",
 		});
 	</script>
+	<script type="text/javascript">
+		function handleHeaderVisibility(entries) {
+			entries.forEach((entry) => {
+				const header = document.querySelector(".wrap-header");
+				const dots = document.querySelector(".wrap-dots");
+				const scroll = document.querySelector(".wrap-scroll");
 
+				if (entry.isIntersecting) {
+					header.style.display = "none";
+					dots.style.display = "none";
+					scroll.style.display = "none";
+				} else {
+					header.style.display = "block";
+					dots.style.display = "block";
+					scroll.style.display = "block";
+				}
+			});
+		}
+
+		let observer2 = new IntersectionObserver(handleHeaderVisibility, {
+			root: null,
+			rootMargin: "0px",
+			threshold: 0.2,
+		});
+
+      let lastSection = document.querySelector("#lastSection");
+      observer2.observe(lastSection);
+    </script>
 </body></html>
